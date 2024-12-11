@@ -1,0 +1,197 @@
+/* Variables de Modo Claro y Oscuro */
+:root {
+    --bs-bg-color: #f8f9fa; /* Fondo claro */
+    --bs-text-color: #212529; /* Texto oscuro */
+    --bs-card-bg: #ffffff; /* Fondo claro de tarjeta */
+    --bs-card-text: #212529; /* Texto oscuro de tarjeta */
+    --bs-brand-color: #212529; /* Color del texto claro (modo claro) */
+    --bs-input-bg: #ffffff; /* Fondo claro de entrada */
+    --bs-input-text: #212529; /* Texto oscuro de entrada */
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+    --bs-bg-color: #121212; /* Fondo oscuro */
+    --bs-text-color: #e0e0e0; /* Texto claro */
+    --bs-card-bg: #1e1e1e; /* Fondo oscuro de tarjeta */
+    --bs-card-text: #e0e0e0; /* Texto claro de tarjeta */
+    --bs-brand-color: #e0e0e0; /* Color del texto claro (modo oscuro) */
+    --bs-input-bg: #333333; /* Fondo oscuro de entrada */
+    --bs-input-text: #e0e0e0; /* Texto claro de entrada */
+}
+
+
+/* Estilos globales */
+body {
+    background-color: var(--bs-bg-color) !important;
+    color: var(--bs-text-color) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo Oscuro: Fondo del contenedor */
+body.dark-mode .container {
+    background-color: #121212; /* Fondo oscuro para el contenedor */
+    color: white; /* Texto blanco en el contenedor */
+}
+
+/* Fondo de formularios dentro del contenedor en modo oscuro */
+body.dark-mode .container form {
+    background-color: #1c1c1c; /* Fondo más oscuro para formularios */
+    padding: 10px; /* Espaciado interno si es necesario */
+    border-radius: 8px; /* Bordes redondeados si es necesario */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Agregar sombra si es necesario */
+}
+/* Estilos para la tarjeta en modo oscuro */
+body.dark-mode .card.shadow-sm {
+    background-color: #333; /* Fondo oscuro para la tarjeta */
+    color: white; /* Texto blanco en la tarjeta */
+    border-color: #444; /* Borde más oscuro */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra más tenue en modo oscuro */
+}
+
+/* Opcional: Hover para las tarjetas en modo oscuro */
+body.dark-mode .card.shadow-sm:hover {
+    background-color: #444; /* Fondo aún más oscuro al pasar el cursor */
+    border-color: #555; /* Borde más claro al pasar el cursor */
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2); /* Aumenta la sombra al pasar el cursor */
+}
+/* Estilos para el cuerpo de la tarjeta en modo oscuro */
+body.dark-mode .card-body {
+    background-color: #333; /* Fondo oscuro en el cuerpo de la tarjeta */
+    color: white; /* Texto blanco en el cuerpo de la tarjeta */
+}
+
+/* Opcional: Si quieres modificar los enlaces dentro de la tarjeta */
+body.dark-mode .card-body a {
+    color: #007bff; /* Color de enlaces en el cuerpo de la tarjeta */
+}
+
+body.dark-mode .card-body a:hover {
+    color: #0056b3; /* Color de enlaces al pasar el cursor */
+}
+
+/* Tarjetas personalizadas */
+.custom-card {
+    background-color: var(--bs-card-bg) !important;
+    color: var(--bs-card-text) !important;
+    border-radius: 10px;
+    border: 1px solid rgba(51, 48, 48, 0.178);
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-body {
+    color: var(--bs-card-text) !important;
+    border: #444;
+    border-width: 1px;
+}
+
+/* Modo Oscuro: Estilos de tarjeta */
+body.dark-mode .custom-card, 
+body.dark-mode .card {
+    background-color: var(--bs-card-bg) !important;
+    color: var(--bs-card-text) !important;
+}
+
+body.dark-mode .custom-card-body, 
+body.dark-mode .card-body {
+    background-color: var(--bs-card-bg) !important;
+    color: var(--bs-card-text) !important;
+}
+
+/* Formulario - modo oscuro */
+input, textarea, select {
+    background-color: var(--bs-input-bg) !important;
+    color: var(--bs-input-text) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #007bff !important; /* Agregar color de foco */
+    outline: none;
+}
+
+
+/* Estilos para el modo oscuro */
+body.dark-mode .form-control {
+    background-color: #555; /* Fondo oscuro en los inputs */
+    color: white; /* Texto blanco en los inputs */
+    border: 1px solid #777; /* Borde suave para los inputs */
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #666; /* Fondo más oscuro al enfocarse */
+    border-color: #007bff; /* Borde azul al enfocarse */
+}
+
+/* Botones */
+body.dark-mode .btn-primary {
+    background-color: #007bff; /* Botón con color azul */
+    border-color: #0056b3; /* Borde azul más oscuro */
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #0056b3; /* Efecto hover en el botón */
+}
+
+/* Tablas - modo oscuro */
+.table {
+    background-color: var(--bs-card-bg) !important;
+    color: var(--bs-card-text) !important;
+}
+
+.table th, .table td {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .table th, body.dark-mode .table td {
+    color: var(--bs-input-text) !important;
+}
+
+/* Navbar y enlaces sociales */
+.navbar-brand {
+    color: var(--bs-brand-color) !important;
+    transition: color 0.3s ease;
+}
+
+.social-icons a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #007bff;
+}
+
+/* Estilos del sidebar */
+body.dark-mode .sidebar {
+    background-color: #222; /* Fondo oscuro del menú lateral */
+}
+
+body.dark-mode .sidebar a {
+    color: white; /* Color blanco de los enlaces del menú lateral */
+}
+
+/* Estilos para footer */
+body.dark-mode footer {
+    background-color: #222; /* Fondo oscuro del footer */
+    color: white; /* Color blanco del footer */
+}
+
+body.dark-mode footer a {
+    color: white; /* Enlaces blancos en el footer */
+}
+
+/* Íconos sociales en modo oscuro */
+body.dark-mode .social-icons a {
+    color: white; /* Íconos sociales blancos */
+}
